@@ -29,7 +29,9 @@ define config.version = "1.0"
 ## Text that is placed on the game's about screen. Place the text between the
 ## triple-quotes, and leave a blank line between paragraphs.
 
-define gui.about = _p("""
+define gui.about = _p("""Chaos. Utter Chaos. In other words,
+
+the story of the highly erratic, somewhat abnormal, (mostly) reformed criminal members of Borondu Dogosu, Caravan of the Solemn Sun.
 """)
 
 
@@ -120,7 +122,7 @@ define config.window_hide_transition = Dissolve(.2)
 ## Controls the default text speed. The default, 0, is infinite, while any other
 ## number is the number of characters per second to type out.
 
-default preferences.text_cps = 0
+default preferences.text_cps = 40
 
 
 ## The default auto-forward delay. Larger numbers lead to longer waits, with 0

@@ -6,13 +6,15 @@ define s2 = Character("Scavenger 2", color = "#14498c")
 define ka = Character("Kaliruun", color = "#7e0200")
 define to = Character("Torr", color = "#14498c")
 define dr = Character("Doctor", color = "#99ccff")
+default glass = 0
+default cobalt = 0
+default yttrium = 0
+default wood = 0
 
-# The game starts here.
 
 label start:
     scene bg westhalfmap
     python:
-        tetras = [0, 0, 0, 0]
         tetraList = ["Glass", "Cobalt", "Yttrium", "Wood"]
         statList = ["Civility", "Fame", "Logic", "Agility", "Force"]
         kaStats = [5, 65, 25, 45, 20]
@@ -20,7 +22,7 @@ label start:
 
     #testing section
     #ka "I have [tetras[0]] [tetraList[0]] + [tetras[1]] [tetraList[1]] + [tetras[2]] [tetraList[2]] + [tetras[3]] [tetraList[3]]"
-    jump hospital
+    show screen gameUI
 
     #actual start
     n "Welcome to Torobos, wayward traveller..."

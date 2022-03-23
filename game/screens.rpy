@@ -1436,6 +1436,8 @@ screen quick_menu():
             textbutton _("Auto") action Preference("auto-forward", "toggle")
             textbutton _("Menu") action ShowMenu()
 
+screen inventory_screen:
+    add "gui/inventory.png" xalign .5 yalign .5
 
 style window:
     variant "small"
