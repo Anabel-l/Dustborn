@@ -2,9 +2,9 @@
 errors listed below, and try again.
 
 
-File "game/custom_screens.rpy", line 39: expected a keyword argument or end of line.
-    selected idle "backbutton.png"
-                  ^
+File "game/custom_screens.rpy", line 13: u'mainposition' is not a keyword argument or valid child for the screen statement.
+    mainposition:
+                ^
 
 Ren'Py Version: Ren'Py 7.4.11.2266
-Tue Mar 22 17:09:40 2022
+Tue Mar 22 17:16:43 2022

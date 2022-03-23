@@ -549,13 +549,13 @@ label start:
         hide doctor
         show torrsylos at left
         to "Fine."
+        $ yttrium += 2
+        $ wood += 1
         n "The fine doctor leaves, content to finally deal with his frustrating relatives."
         to "We're getting ripped off."
         ka "6 cobalt is better than zero."
         ka "Plus, it shouldn't be too hard."
         ka "At least it'll be something to keep us from being bored."
-        $ tetras[2] += 2
-        $ tetras[3] += 1
         jump part2
     label rate:
         python:
@@ -589,6 +589,7 @@ label start:
         dr "Fine!"
         dr "The family reunion takes place tomorrow."
         dr "Here's my number."
+        $ wood +=16
         dr "If even one of them survives-"
         ka "We know the routine."
         ka "Don't worry your little Haven head about it."
@@ -610,7 +611,6 @@ label start:
         dr "Fine!"
         hide doctor
         n "And with that, the fine doctor leaves."
-        $ tetras[3]+=16
         jump part2
 
     label part2:

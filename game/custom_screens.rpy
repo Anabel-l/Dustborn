@@ -4,29 +4,32 @@ screen gameUI:
         yalign 0.0
         xoffset -30
         yoffset 30
-        idle "tetras.png"
+        idle "tetrasidle.png"
         action ShowMenu("TetrasUI")
 
+
+
 screen TetrasUI:
-    #add "tetras"
+
     frame:
+        background "tetras"
         xalign 0.5
         yalign 0.5
-        xpadding 30
-        ypadding 30
+        xpadding 80
+        ypadding 10
 
         hbox:
-            spacing 40
+            spacing 30
 
             vbox:
-                spacing 10
+                spacing 15
                 text "Glass" size 40
                 text "Cobalt" size 40
                 text "Yttrium" size 40
                 text "Wood" size 40
 
             vbox:
-                spacing 10
+                spacing 15
                 text "[glass]" size 40
                 text "[cobalt]" size 40
                 text "[yttrium]" size 40
@@ -36,5 +39,5 @@ screen TetrasUI:
         yalign 0.0
         xoffset -30
         yoffset 30
-        idle "backbutton.png"
+        idle "back.png"
         action Return()
