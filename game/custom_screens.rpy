@@ -90,8 +90,11 @@ screen CharacterProfiles:
 screen KaliruunStats:
     frame:
         background "gui/frame.png"
-        xalign 0.5
-        yalign 0.5
+        xalign 1.0
+        yalign 1.0
+        left_margin 400
+        top_margin 50
+
         image "Stats/Kalistats.png"
 
         grid 12 5:
@@ -172,3 +175,76 @@ screen TorrStats:
         yalign 1.0
         left_margin 400
         top_margin 50
+
+        image "Stats/Torrstats.png"
+
+        grid 12 5:
+            spacing -6.2
+            yspacing 6.9
+            left_margin 386
+            top_margin 77
+
+            image "Stats/Stat40.png"
+            image "Stats/Stat0.png"
+            image "Stats/Stat0.png"
+            image "Stats/Stat0.png"
+            image "Stats/Stat0.png"
+            image "Stats/Stat0.png"
+            image "Stats/Stat0.png"
+            image "Stats/Stat0.png"
+            image "Stats/Stat0.png"
+            image "Stats/Stat0.png"
+            image "Stats/Stat0.png"
+            image "Stats/Stat0.png"
+
+            image "Stats/Stat80.png"
+            image "Stats/Stat0.png"
+            image "Stats/Stat0.png"
+            image "Stats/Stat0.png"
+            image "Stats/Stat0.png"
+            image "Stats/Stat0.png"
+            image "Stats/Stat0.png"
+            image "Stats/Stat0.png"
+            image "Stats/Stat0.png"
+            image "Stats/Stat0.png"
+            image "Stats/Stat0.png"
+            image "Stats/Stat0.png"
+
+            image "Stats/Stat20.png"
+            image "Stats/Stat0.png"
+            image "Stats/Stat0.png"
+            image "Stats/Stat0.png"
+            image "Stats/Stat0.png"
+            image "Stats/Stat0.png"
+            image "Stats/Stat0.png"
+            image "Stats/Stat0.png"
+            image "Stats/Stat0.png"
+            image "Stats/Stat0.png"
+            image "Stats/Stat0.png"
+            image "Stats/Stat0.png"
+
+            image "Stats/Stat40.png"
+            image "Stats/Stat0.png"
+            image "Stats/Stat0.png"
+            image "Stats/Stat0.png"
+            image "Stats/Stat0.png"
+            image "Stats/Stat0.png"
+            image "Stats/Stat0.png"
+            image "Stats/Stat0.png"
+            image "Stats/Stat0.png"
+            image "Stats/Stat0.png"
+            image "Stats/Stat0.png"
+            image "Stats/Stat0.png"
+
+            image "Stats/Stat0.png"
+            image "Stats/Stat0.png"
+            image "Stats/Stat0.png"
+            image "Stats/Stat0.png"
+            image "Stats/Stat0.png"
+            image "Stats/Stat0.png"
+            image "Stats/Stat0.png"
+            image "Stats/Stat0.png"
+            image "Stats/Stat0.png"
+            image "Stats/Stat0.png"
+            image "Stats/Stat0.png"
+            image "Stats/Stat0.png"
