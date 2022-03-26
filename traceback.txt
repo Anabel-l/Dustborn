@@ -1,26 +1,72 @@
 ﻿I'm sorry, but an uncaught exception occurred.
 
 While running game code:
-  File "game/script.rpy", line 557, in script
-    $ tetras[2] += 2
-  File "game/script.rpy", line 557, in <module>
-    $ tetras[2] += 2
-NameError: name 'tetras' is not defined
+  File "renpy/common/00gamemenu.rpy", line 173, in script
+    $ ui.interact()
+  File "renpy/common/00gamemenu.rpy", line 173, in <module>
+    $ ui.interact()
+  File "game/custom_screens.rpy", line 90, in execute
+    screen KaliruunStats:
+  File "game/custom_screens.rpy", line 90, in execute
+    screen KaliruunStats:
+  File "game/custom_screens.rpy", line 91, in execute
+    frame:
+  File "game/custom_screens.rpy", line 96, in execute
+    grid 12 1:
+  File "game/custom_screens.rpy", line 101, in execute
+    python:
+  File "game/custom_screens.rpy", line 104, in <module>
+    im = Image.open('Stats/Stat20.png')
+AttributeError: 'function' object has no attribute 'open'
 
 -- Full Traceback ------------------------------------------------------------
 
 Full traceback:
-  File "game/script.rpy", line 557, in script
-    $ tetras[2] += 2
+  File "renpy/common/00gamemenu.rpy", line 173, in script
+    $ ui.interact()
   File "C:\Users\Black Cat\Downloads\renpy-7.4.11-sdk/renpy/ast.py", line 928, in execute
     renpy.python.py_exec_bytecode(self.code.bytecode, self.hide, store=self.store)
   File "C:\Users\Black Cat\Downloads\renpy-7.4.11-sdk/renpy/python.py", line 2245, in py_exec_bytecode
     exec(bytecode, globals, locals)
-  File "game/script.rpy", line 557, in <module>
-    $ tetras[2] += 2
-NameError: name 'tetras' is not defined
+  File "renpy/common/00gamemenu.rpy", line 173, in <module>
+    $ ui.interact()
+  File "C:\Users\Black Cat\Downloads\renpy-7.4.11-sdk/renpy/ui.py", line 298, in interact
+    rv = renpy.game.interface.interact(roll_forward=roll_forward, **kwargs)
+  File "C:\Users\Black Cat\Downloads\renpy-7.4.11-sdk/renpy/display/core.py", line 3325, in interact
+    repeat, rv = self.interact_core(preloads=preloads, trans_pause=trans_pause, pause=pause, pause_start=pause_start, **kwargs)
+  File "C:\Users\Black Cat\Downloads\renpy-7.4.11-sdk/renpy/display/core.py", line 3737, in interact_core
+    root_widget.visit_all(lambda i : i.per_interact())
+  File "C:\Users\Black Cat\Downloads\renpy-7.4.11-sdk/renpy/display/core.py", line 568, in visit_all
+    d.visit_all(callback, seen)
+  File "C:\Users\Black Cat\Downloads\renpy-7.4.11-sdk/renpy/display/core.py", line 568, in visit_all
+    d.visit_all(callback, seen)
+  File "C:\Users\Black Cat\Downloads\renpy-7.4.11-sdk/renpy/display/core.py", line 568, in visit_all
+    d.visit_all(callback, seen)
+  File "C:\Users\Black Cat\Downloads\renpy-7.4.11-sdk/renpy/display/core.py", line 568, in visit_all
+    d.visit_all(callback, seen)
+  File "C:\Users\Black Cat\Downloads\renpy-7.4.11-sdk/renpy/display/screen.py", line 436, in visit_all
+    callback(self)
+  File "C:\Users\Black Cat\Downloads\renpy-7.4.11-sdk/renpy/display/core.py", line 3737, in <lambda>
+    root_widget.visit_all(lambda i : i.per_interact())
+  File "C:\Users\Black Cat\Downloads\renpy-7.4.11-sdk/renpy/display/screen.py", line 447, in per_interact
+    self.update()
+  File "C:\Users\Black Cat\Downloads\renpy-7.4.11-sdk/renpy/display/screen.py", line 637, in update
+    self.screen.function(**self.scope)
+  File "game/custom_screens.rpy", line 90, in execute
+    screen KaliruunStats:
+  File "game/custom_screens.rpy", line 90, in execute
+    screen KaliruunStats:
+  File "game/custom_screens.rpy", line 91, in execute
+    frame:
+  File "game/custom_screens.rpy", line 96, in execute
+    grid 12 1:
+  File "game/custom_screens.rpy", line 101, in execute
+    python:
+  File "game/custom_screens.rpy", line 104, in <module>
+    im = Image.open('Stats/Stat20.png')
+AttributeError: 'function' object has no attribute 'open'
 
 Windows-10-10.0.19041
 Ren'Py 7.4.11.2266
 Dustborn 1.0
-Tue Mar 22 17:28:28 2022
+Sat Mar 26 09:52:54 2022
