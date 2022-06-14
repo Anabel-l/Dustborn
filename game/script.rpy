@@ -1,15 +1,27 @@
-﻿# characters
+﻿#setup
+init python:
+    config.automatic_images = [ ' ', '_', '-', '/' ]
+    config.screen_width = 1280
+    config.screen_height = 720
+
+# characters
 define n = Character("Narrator", color = "#bababa")
 define e = Character("Dark Angel", color = "#3d4b1d")
-define s1 = Character("Scavenger 1", color = "#7e0200")
-define s2 = Character("Scavenger 2", color = "#14498c")
-define ka = Character("Kaliruun", color = "#7e0200")
-define to = Character("Torr", color = "#14498c")
-define dr = Character("Doctor", color = "#99ccff")
+define s1 = Character("Scavenger 1", color = "#7e0200", image = "kaliruun")
+define s2 = Character("Scavenger 2", color = "#14498c", image = "torrsylos")
+define ka = Character("Kaliruun", color = "#7e0200", image = "kaliruun")
+define to = Character("Torr", color = "#14498c", image = "torrsylos")
+define dr = Character("Doctor", color = "#99ccff", image = "doctor")
+define p1 = Character("Peacetech 1", color = "#8AFBFF", image = "peacetech1")
+define p2 = Character("Peacetech 2", color = "#8AFBFF", image = "peacetech2")
+define o = Character("O Dajer", color = "#eb9346", image = "odajerhospital")
+
 default glass = 0
 default cobalt = 0
 default yttrium = 0
 default wood = 0
+
+default relation = ""
 
 
 label start:
@@ -154,6 +166,7 @@ label start:
             "Her step-siblings on the third side from her second mother's first husband's Ganan mistress":
                 jump complicated
     label cousins:
+        $ relation = "cousin"
         hide doctor
         show kaliruunsmile at left
         ka "We're her cousins."
@@ -254,14 +267,153 @@ label start:
             dr "I- I don't understand."
             ka "As I remember, those study sessions got a bit..."
             hide kaliruun
-            show torrsylos at left
+            show torrsylossmile at left
             to "Involved."
             dr "Excuse me?"
             dr "I- I really don't think we have met before."
-            hide torrsylos
+            hide torrsylossmile
             show kaliruun at left
             ka "I'm truly offended!"
-            jump part2
+            dr "Oh... I-I... of course!"
+            dr "You... you were in my... seminar!"
+            hide kaliruun
+            show kaliruunsmile at left
+            ka "Yes, THE seminar!"
+            dr "Yes! How ever could I have forgotten..."
+            dr "Please accept my sincerest apologies"
+            menu:
+                "I understand completely, those were very hectic times.":
+                    jump understand
+                "I... I thought we were more than that...":
+                    jump more
+            label understand:
+                ka "*wink wink* I remember you were quite busy."
+                ka "So have you changed at all? *raises eyebrows*"
+                dr "..."
+                dr "I don't know what you mean."
+                ka "Ayyy you're just having too much fun aren't you?"
+                dr "I've- I've really tried to change."
+                dr "You know who I am though."
+                dr "Please don't tell my wife."
+                ka "I... I..."
+                ka "Of course! Of course I do."
+                hide doctor
+                show torrsylos at right
+                to "And of course your wife doesn't know."
+                to "We wouldn't want her to know either."
+                to "How much money would it take to keep it that way though?"
+                menu:
+                    "Extort the Doctor.":
+                        jump extort
+                    "Reprimand Torr":
+                        jump reprimand
+                label extort:
+                    hide kaliruun
+                    show kaliruunsmile at left
+                    ka "After all, your reputation at this hospital is quite something!"
+                    ka "Impressive how far you've gone since our school days."
+                    to "Wouldn't want it to all go to dust would you."
+                    ka "No you really wouldn't."
+                    hide torrsylos
+                    show doctor at right
+                    dr "Please, please no."
+                    dr "I swear, anything you want."
+                    to "One wood."
+                    hide kaliruunsmile
+                    show torrsylos at left
+                    dr "Per mistress???"
+                    hide doctor
+                    show kaliruun at right
+                    ka "..."
+                    to "..."
+                    menu:
+                        "Yes. Per mistress.":
+                            jump per
+                        "No. Just one is fine!":
+                            jump just
+                    label per:
+                        ka "Yes. Per mistress."
+                        hide torrsylos
+                        show doctor at left
+                        dr "Oh hellfires."
+                        dr "I... I can't just..."
+                        ka "Oh yes you can, my dear Doctor."
+                        dr "Oh my..."
+                        dr "Alright. I'll wire you the funds."
+                        $  wood += 3
+                        dr "As long as you promise I will never hear from you again."
+                        ka "Lovely!"
+                        ka "But we will need to check in on our cousin of course."
+                        n "The Doctor grumbles and leaves, having lost much more in that room than he had ever dreamed."
+                        jump part2
+                    label just:
+                        ka "No. Just one is fine!"
+                        hide torrsylos
+                        show doctor at left
+                        dr "Oh thank the dunes."
+                        hide doctor
+                        show torrsylos at left
+                        to "..."
+                        ka "..."
+                        hide torrsylos
+                        show doctor at left
+                        dr "I'll wire it to you."
+                        $ wood += 1
+                        dr "Just never mention it again."
+                        n "The Doctor leaves hurriedly, glad to have paid a relatively small sum to push that particular problem to a later date."
+                label reprimand:
+                    hide kaliruunsmile
+                    show kaliruun at left
+                    ka "Torr! How dare you?"
+                    ka "We don't do that to old friends."
+                    ka "*leans over* My cousin can be a bit... tempermental."
+                    ka "You know, all those years in the open desert can do things to one's mind."
+                    to "Hey!"
+                    hide torrsylos
+                    show doctor at right
+                    dr "What a duster notion of-"
+                    dr "I can't even-"
+                    dr "You poor thing, Doctor..."
+                    ka "Doctor Kaliruun."
+                    ka "And yes it's quite a struggle."
+                    ka "You know how cousins are."
+                    dr "Oh all too well."
+                    dr "In fact, unfortunately, mine are in town for a reunion."
+                    n "The doctor sighs deeply"
+                    ka "Oh you, poor, poor thing."
+                    hide kaliruun
+                    show torrsylos at left
+                    n "Torr grumbles something impolite under his breath."
+                    dr "Well- uh-"
+                    dr "If you would like, perhaps we could deal with them together?"
+                    dr "Maybe your uh...cousin could put his duster skills to better use?"
+                    to "And what skills might those be?"
+                    dr "Umm... you know... those stories I've heard..."
+                    to "What stories."
+                    hide doctor
+                    show kaliruunsmile at right
+                    ka "Dearest cousin... let's try to be a little more civil shall we?"
+                    to "*unintelligible grumbles*"
+                    hide torrsylos
+                    show doctor at left
+                    dr "You see, Dr. Kaliruun, these cousins of my wife are blood suckers."
+                    ka "So cool! I didn't know those were real!"
+                    dr "Oh. Oh no! Not like that!"
+                    hide kaliruunsmile
+                    show kaliruun at right
+                    dr "Not in the literal sense! Oh dunes no. I'm quite sure those still do not exist."
+                    dr "More like the kind that suck everything from your Rolser-Wen Interhaven Bank account, if you catch my drift."
+                    ka "*dissapointed* Aww... I wanted to meet them. Maybe they would teach me some tricks."
+                    dr "*takes a step back* Umm... tricks?"
+                    hide kaliruun
+                    show kaliruunsmile at right
+                    ka "You know, like advancements in blood transfusions, of course!"
+                    dr "*sighs with relief* Of course!"
+                    hide kaliruunsmile
+                    show torrsylos at right
+                    to "Of course. Don't care. Do you want me to kill them or not?"
+                    dr "Shhh!! Hypothetically, if I were to ask of you this favor, how much would I need to compensate you in return?"
+                    jump assassination
     label sarcasm:
         $ toStats[0]-=1
         to "Have you heard of this thing called sarcasm?"
@@ -289,6 +441,7 @@ label start:
     label siblings:
         $ kaStats[0]+=1
         $ toStats[0]+=1
+        $ relation = "sister"
         hide torrsylos
         hide kaliruun
         show doctor
@@ -324,10 +477,11 @@ label start:
         dr "Uhmm... Uh I'll leave you with your sister then."
         hide doctor
         n "The doctor leaves, intent on avoiding awkward conversations."
-        jump part2
+        jump police
     label parents:
         $ kaStats[0]+=1
         $ toStats[0]+=1
+        $ relation = "daughter"
         hide torrsylos
         hide kaliruun
         dr "Excuse me??"
@@ -407,10 +561,11 @@ label start:
         to "We must have a contest to settle it at some point."
         ka "Sounds like a decent plan."
         ka "After we make some solid tetras."
-        jump part2
+        jump police
     label complicated:
         $ kaStats[0]+=1
         $ toStats[0]+=1
+        $ relation = "step-sibling"
         hide doctor
         hide torrsylos
         show doctor at right
@@ -479,6 +634,9 @@ label start:
     label assassination:
         $ kaStats[1]+=2
         $ toStats[1]+=2
+        hide doctor
+        show torrsylos at left
+        show kaliruun at right
         ka "Well..."
         ka "Hypothetically..."
         ka "It would only cost a wooden tetra per person."
@@ -519,7 +677,7 @@ label start:
         n "Torr shrugs."
         n "He isn't going to deny he had inflicted his fair share of terror."
         n "After all, he was raised in one of the most prestigious desert pirate families of all time."
-        jump part2
+        jump police
     label bargain:
         hide kaliruun
         show torrsylos at right
@@ -615,5 +773,111 @@ label start:
 
     label part2:
         n "onward"
+
+    label police:
+        scene bg hospitalredo
+        n "Peacetech burst in to the peaceful hospital room."
+        show peacetech1 at left
+        show torrsylos at right
+        p1 "No one expects the Peacetech Investigation!"
+        to "*scoffs* That was quick."
+        hide peacetech1
+        show kaliruun at left
+        ka "I know right? I was expecting at least a day before we got officers on our ass."
+        hide kaliruun
+        show peacetech1 at left
+        p1 "No! No one expects the Peacetech Investigation!"
+        hide torrsylos
+        show kaliruunsmile at right
+        ka "Whatever could we have done to warrant such an investigation?"
+        ka "Oh!"
+        ka "Oh is this because, we're, dare I say it..."
+        ka "from outside of the Haven?"
+        hide peacetech1
+        show peacetech2 at left
+        p2 "No. We do not discriminate on Haven-status."
+        hide peacetech2
+        show peacetech1 at left
+        p1 "Wait I thought you said-"
+        hide peacetech1
+        show peacetech2 at left
+        p2 "No. Like I said before. We do not discriminate on Haven-status."
+        ka "What exactly did the good officer say?"
+        ka "I'm ever so curious."
+        hide peacetech2
+        show peacetech1 at left
+        p1 "Well she said that you might be-"
+        hide peacetech1
+        show peacetech2 at left
+        p2 "I said nothing."
+        hide peacetech2
+        show torrayloa at left
+        to "Officer, we have just dropped off our dearest..."
+        ka "[relation]"
+        to "Our dearest [relation] to this hospital, what seems to be the problem?"
+        hide torrsylos
+        hide kaliruunsmile
+        show peacetech1 at left
+        show peacetech2 at right
+        p1 "You're under arrest!"
+        p2 "*Heavy sigh* No you are not."
+        p2 "We are here for a civil conversation. All we want is more information on your relation to..."
+        p2 "*Squints at medical screen*"
+        p2 "... O"
+        p2 "O Dajer?"
+        p1 "Oh! Oh my sands! Isn't she #10 on the top ten most wanted in Suda?"
+        p1 "I recognize her from the Peacetech Chill Lounge and Community Station™!"
+        hide peacetech1
+        hide peacetech2
+        show kaliruun at left
+        show torrsylos at right
+        to "Oh by the damned shifting sands!"
+        ka "Tkha!"
+        ka "Kadza whal so tkhabo khuuzu sidaghan-bak uuzi gha tkhabobai..."
+        to "I take no blame for this. It was your idea start to finish."
+        ka "Mine? Well sure I'll take credit if you want me to but I wasn't the one who skipped a background check on her!"
+        to "She's a driver. She's Arrow. I didn't think a background check was necessary."
+        ka "I mean sure everyone who's ever watched an inter-Haven broadcast puts bets on their favorite driver but that's not exactly..."
+        ka "an endorsement?"
+        ka "I mean am I trustworthy just cuz a lotta people know my name?"
+        hide torrsylos
+        hide kaliruun
+        show peacetech1 at left
+        show peacetech2 at right
+        p2 "Enough now. Identification please."
+        p1 "And then we'll put you under arrest!"
+        p2 "*sighs*"
+        hide peacetech1
+        show kaliruun at left
+        ka "... identification! Right. That thing. That ever so important document that I have..."
+        ka "That I have somewhere 'round here..."
+        ka "Actually well uh didn't those pirates take off with our papers and...?"
+        hide kaliruun
+        show torrsylos at left
+        to "Yes. They took everything we had."
+        to "It was a miracle we made it here."
+        p2 "*louder* Identification. NOW."
+        n "With that last fateful pronunciation, our dearest Arrow, O Dajer of the top 10 most wanted, bolts awake."
+        n "She looks dizzy, woozy, weak, but what comes next is nothing but-"
+        hide torrsylos
+        hide peacetech2
+        show odajerhospital at right
+        o "FUCK"
+        show kaliruunsmile at left
+        ka "Welcome to the party!"
+        hide kaliruunsmile
+        show kaliruun at left
+        ka "*turns to Torr* Can we go now?"
+        n "The newly awakened O Dajer looks around in a daze, clearly looking for someone not there."
+        o "Where's Dark Angel?"
+        hide odajerhospital
+        show peacetech1 at right
+        p1 "*Gasp* Number 8 on the list?"
+        ka "What list?"
+        p1 "The top ten most wanted!"
+        p1 "Oh today is so exciting!"
+        hide peacetech1
+        show peacetech2 at right
+        p2 "When was the last time you came into contact with Dark Angel?"
 
     return

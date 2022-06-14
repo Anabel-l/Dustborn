@@ -2,9 +2,13 @@
 errors listed below, and try again.
 
 
-File "game/custom_screens.rpy", line 103: u'while' is not a keyword argument or valid child for the grid statement.
-    while count >= 0:
+File "game/script.rpy", line 775: end of line expected.
+    n "" + relation
          ^
 
+File "game/script.rpy", line 816: expected statement.
+    ka relation
+               ^
+
 Ren'Py Version: Ren'Py 7.4.11.2266
-Sat Mar 26 10:01:01 2022
+Mon Jun 13 22:16:42 2022
