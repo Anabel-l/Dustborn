@@ -777,15 +777,15 @@ label start:
     label police:
         scene bg hospitalredo
         n "Peacetech burst in to the peaceful hospital room."
-        show peacetech1 at left
+        show p1 at left
         show torrsylos at right
         p1 "No one expects the Peacetech Investigation!"
         to "*scoffs* That was quick."
-        hide peacetech1
+        hide p1
         show kaliruun at left
         ka "I know right? I was expecting at least a day before we got officers on our ass."
         hide kaliruun
-        show peacetech1 at left
+        show p1 at left
         p1 "No! No one expects the Peacetech Investigation!"
         hide torrsylos
         show kaliruunsmile at right
@@ -793,11 +793,11 @@ label start:
         ka "Oh!"
         ka "Oh is this because, we're, dare I say it..."
         ka "from outside of the Haven?"
-        hide peacetech1
-        show peacetech2 at left
+        hide p1
+        show p2 at left
         p2 "No. We do not discriminate on Haven-status."
-        hide peacetech2
-        show peacetech1 at left
+        hide p2
+        show p1 at left
         p1 "Wait I thought you said-"
         hide peacetech1
         show peacetech2 at left
@@ -811,7 +811,7 @@ label start:
         show peacetech2 at left
         p2 "I said nothing."
         hide peacetech2
-        show torrayloa at left
+        show torrsylos at left
         to "Officer, we have just dropped off our dearest..."
         ka "[relation]"
         to "Our dearest [relation] to this hospital, what seems to be the problem?"
