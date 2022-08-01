@@ -1,40 +1,41 @@
-Sun Jul 31 12:47:35 2022
+Sun Jul 31 12:57:41 2022
 Windows-10-10.0.19041
 Ren'Py 7.4.11.2266
  
 
-Bootstrap to the start of init.init took 1.22s
-Early init took 0.45s
-Loader init took 0.21s
-Loading error handling took 0.15s
-Loading script took 1.39s
-Loading save slot metadata. took 0.42s
+Bootstrap to the start of init.init took 0.97s
+Early init took 0.08s
+Loader init took 0.20s
+Loading error handling took 0.17s
+Loading script took 3.39s
+Loading save slot metadata. took 0.41s
 Loading persistent took 0.00s
 Importing _renpysteam: ImportError('No module named _renpysteam',)
-Running init code took 0.61s
-Loading analysis data took 0.12s
+Running init code took 0.51s
+Loading analysis data took 0.21s
 Analyze and compile ATL took 0.01s
 Index archives took 0.00s
-Dump and make backups. took 0.59s
+Backing up script files to 'C:\\Users\\Black Cat\\AppData\\Roaming/RenPy/backups\\Dustborn':
+Dump and make backups. took 0.89s
 Cleaning cache took 0.00s
 Making clean stores took 0.00s
-Initial gc. took 0.23s
+Initial gc. took 0.25s
 DPI scale factor: 1.500000
 nvdrs: Loaded, about to disable thread optimizations.
 nvdrs: "Couldn't load nvlib." (can be ignored)
 Creating interface object took 0.00s
 Cleaning stores took 0.00s
-Init translation took 0.31s
-Build styles took 0.02s
-Load screen analysis took 0.18s
-Analyze screens took 0.00s
-Save screen analysis took 0.00s
-Prepare screens took 0.80s
+Init translation took 0.26s
+Build styles took 0.01s
+Load screen analysis took 0.00s
+Analyze screens took 0.09s
+Save screen analysis took 0.36s
+Prepare screens took 0.53s
 Save pyanalysis. took 0.00s
-Save bytecode. took 0.00s
+Save bytecode. took 0.22s
 Running _start took 0.00s
 Performance test:
-Interface start took 1.62s
+Interface start took 1.13s
 
 Initializing gl2 renderer:
 primary display bounds: (0, 0, 1920, 1080)
@@ -44,7 +45,12 @@ Vendor: 'Intel'
 Renderer: 'Intel(R) HD Graphics 5500'
 Version: '4.4.0 - Build 20.19.15.5126'
 Display Info: None
-Screen sizes: virtual=(1280, 720) physical=(1739, 978) drawable=(1739, 978)
+Screen sizes: virtual=(1280, 720) physical=(1733, 975) drawable=(1733, 975)
 Maximum texture size: 4096x4096
-Screen sizes: virtual=(1280, 720) physical=(1920, 986) drawable=(1920, 986)
-Maximum texture size: 4096x4096
+Cleaning stores took 0.00s
+Init translation took 0.00s
+Build styles took 0.01s
+Load screen analysis took 0.05s
+Analyze screens took 0.00s
+Prepare screens took 0.00s
+Running _start took 0.00s

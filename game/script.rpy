@@ -12,7 +12,7 @@ define s2 = Character("Scavenger 2", color = "#14498c", image = "torrsylos")
 define ka = Character("Kaliruun", color = "#7e0200", image = "kaliruun")
 define to = Character("Torr", color = "#14498c", image = "torrsylos")
 define dr = Character("Doctor", color = "#99ccff", image = "doctor")
-define p1 = Character("Peacetech 1", color = "#8AFBFF", image = "peacetech1")
+define p1 = Character("Peacetech 1", color = "#8AFDFF", image = "peacetech1")
 define p2 = Character("Peacetech 2", color = "#8AFBFF", image = "peacetech2")
 define o = Character("O Dajer", color = "#eb9346", image = "odajerhospital")
 
@@ -777,15 +777,15 @@ label start:
     label police:
         scene bg hospitalredo
         n "Peacetech burst in to the peaceful hospital room."
-        show p1 at left
+        show peacetech1 at left
         show torrsylos at right
         p1 "No one expects the Peacetech Investigation!"
         to "*scoffs* That was quick."
-        hide p1
+        hide peacetech1
         show kaliruun at left
         ka "I know right? I was expecting at least a day before we got officers on our ass."
         hide kaliruun
-        show p1 at left
+        show peacetech1 at left
         p1 "No! No one expects the Peacetech Investigation!"
         hide torrsylos
         show kaliruunsmile at right
@@ -793,11 +793,11 @@ label start:
         ka "Oh!"
         ka "Oh is this because, we're, dare I say it..."
         ka "from outside of the Haven?"
-        hide p1
-        show p2 at left
+        hide peacetech1
+        show peacetech2 at left
         p2 "No. We do not discriminate on Haven-status."
-        hide p2
-        show p1 at left
+        hide peacetech2
+        show peacetech1 at left
         p1 "Wait I thought you said-"
         hide peacetech1
         show peacetech2 at left
@@ -879,5 +879,4 @@ label start:
         hide peacetech1
         show peacetech2 at right
         p2 "When was the last time you came into contact with Dark Angel?"
-
     return

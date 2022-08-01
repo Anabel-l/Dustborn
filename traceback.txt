@@ -1,22 +1,22 @@
 ﻿I'm sorry, but an uncaught exception occurred.
 
 While running game code:
-  File "game/script.rpy", line 798, in script
-    p2 "No. We do not discriminate on Haven-status."
-Exception: Sayer 'p2' is not defined.
+  File "game/script.rpy", line 782, in script
+    peacetech1 "No one expects the Peacetech Investigation!"
+Exception: Sayer 'peacetech1' is not defined.
 
 -- Full Traceback ------------------------------------------------------------
 
 Full traceback:
-  File "game/script.rpy", line 798, in script
-    p2 "No. We do not discriminate on Haven-status."
-  File "C:\Users\Black Cat\Downloads\renpy-7.4.11-sdk/renpy/ast.py", line 681, in execute
+  File "game/script.rpy", line 782, in script
+    peacetech1 "No one expects the Peacetech Investigation!"
+  File "renpy/ast.py", line 681, in execute
     who = eval_who(self.who, self.who_fast)
-  File "C:\Users\Black Cat\Downloads\renpy-7.4.11-sdk/renpy/ast.py", line 574, in eval_who
+  File "renpy/ast.py", line 574, in eval_who
     raise Exception("Sayer '%s' is not defined." % who)
-Exception: Sayer 'p2' is not defined.
+Exception: Sayer 'peacetech1' is not defined.
 
 Windows-10-10.0.19041
 Ren'Py 7.4.11.2266
 Dustborn 1.0
-Mon Jun 13 23:36:39 2022
+Sun Jul 31 12:56:50 2022
